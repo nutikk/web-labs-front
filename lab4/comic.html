@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Петерс Анна Алексеевна. Хулиномика</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <style>
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cloud {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    animation: appear 1s forwards;
+}
+
+.image-container:hover+cloud {
+    opacity: 1;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#cloud1 {
+    left: 15%;
+    bottom: 80%;
+    width: 250px; 
+    height: 150px;
+    animation-delay: 3s;
+    font-size: 30px;
+    line-height: 2; 
+    text-align: center; 
+    padding-top: 30px; 
+    font-family: segoe script;
+    z-index: 10;
+    
+}
+
+#cloud2 {
+    left: 25%;
+    bottom: 70%;
+    width: 200px;
+    height: 100px;
+    animation-delay: 2s;
+    margin-top: 20px;
+    z-index: 7;
+}
+
+#cloud3 {
+    left: 35%;
+    bottom: 60%;
+    width: 150px;
+    height: 75px;
+    animation-delay: 1s;
+    margin-top: 30px;
+    z-index: 5;
+}
+
+#cloud4 {
+    left: 45%;
+    bottom: 55%;
+    width: 100px;
+    height: 50px;
+    animation-delay: 0s;
+    margin-top: 40px;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная 4
+    </header>
+
+    <main>
+        <div class="image-container">
+            <img src="еке.jpg">
+            <div class="cloud" id="cloud1">Убийственный сайт</div>
+            <div class="cloud" id="cloud2"></div>
+            <div class="cloud" id="cloud3"></div>
+            <div class="cloud" id="cloud4"></div>
+        </div>
+
+    </main>
+
+    <footer>
+        &copy; Анна Петерс, ФБИ-21, 2 курс, 2024
+    </footer>
+    </body>
+</html>
