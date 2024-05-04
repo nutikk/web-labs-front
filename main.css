@@ -27,6 +27,7 @@ footer {
 
 a {
     text-decoration: none;
+    transition: 1s 2s;
 }
 
 
@@ -46,6 +47,7 @@ a:hover {
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
     background: saddlebrown;
+    transition: 0,3;
 }
 a:active{
     border-radius: 10px;
