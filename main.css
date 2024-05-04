@@ -27,7 +27,7 @@ footer {
 
 a {
     text-decoration: none;
-    transition: 1s 2s;
+    transition: 0.3s 2s;
 }
 
 
@@ -46,14 +46,29 @@ a:hover {
     text-decoration: underline;
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-    background: saddlebrown;
-    transition: 0,3;
+    background: rgb(147, 17, 134);
+    transition: 0,7;
 }
 a:active{
     border-radius: 10px;
-   background: #E8CCB5;
+   background: #91480c;
    color: rgb(239, 22, 22);
    padding: 15px 30px;
    position: relative;
    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+div.menu{
+    border: 7px solid maroon;
+    border-radius: 5px;
+    width:300px;
+    margin: 0 auto;
+    border-radius: 10px;
+
+}
+div.menu:hover{
+background-color: gray;
+box-shadow: 0 0 15px black;
+};
+div.zzz{
+    text-align: center;
 }
