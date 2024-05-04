@@ -14,6 +14,7 @@ main {
     color: maroon;
     font-family: lucida console;
     font-size: 16px;
+    margin: 10px 20px 45px
 }
 footer {
     background-color: darksalmon;
@@ -23,6 +24,11 @@ footer {
     padding-right: 5px;
     font-style: italic;
     text-align: right;
+    position: fixed;
+    bottom:0;
+    right: 0;
+    left: 0;
+
 }
 
 a {
@@ -68,7 +74,4 @@ div.menu{
 div.menu:hover{
 background-color: gray;
 box-shadow: 0 0 15px black;
-};
-div.zzz{
-    text-align: center;
 }
