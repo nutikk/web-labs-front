@@ -23,7 +23,35 @@ footer {
     padding-right: 5px;
     font-style: italic;
     text-align: right;
-    }
-    a {
-        text-decoration: none;
-    }
+}
+
+a {
+    text-decoration: none;
+}
+
+
+a:link{
+    color: blue;
+    text-decoration: dotted;
+    
+}
+a:visited{
+    color: black;
+    opacity: 0.3;
+
+}
+a:hover {
+    color:whitesmoke;
+    text-decoration: underline;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    background: saddlebrown;
+}
+a:active{
+    border-radius: 10px;
+   background: #E8CCB5;
+   color: rgb(239, 22, 22);
+   padding: 15px 30px;
+   position: relative;
+   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
