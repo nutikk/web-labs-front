@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Петерс Анна Алексеевна. Хулиномика</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <style>
+        div {
+            width: 300px;
+            height: 70px;
+            line-height: 70px;
+            background-color: brown;
+            margin: 5px; 
+            padding: 5px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: brown;
+            border: 3px dotted maroon;
+            color: aliceblue;
+        }
+        .relative:hover{
+            position:relative;
+            right: -130px;
+            top: -110px;
+            z-index: 10;
+        }
+        .absolute {
+            position: absolute;
+            left: 300px;
+        }
+        .absolute:hover {
+            transform: scale(1.05);
+            background-color: #a52a2a;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+   
+    </style>
+</head>
+
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная 4
+    </header>
+
+    <main>
+        <div>static</div>
+        <div>static</div>
+        <div class="relative">relative</div>
+        <div>static</div>
+        <div>static</div>
+        <div class="absolute">absolute</div>
+        <div>static</div>
+        <div>static</div>
+        <div>static</div>
+        <div>static</div>
+
+    </main>
+
+    <footer>
+        &copy; Анна Петерс, ФБИ-21, 2 курс, 2024
+    </footer>
+    </body>
+</html>
