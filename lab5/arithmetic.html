@@ -15,6 +15,15 @@
             let result = a + b;
             alert('Сумма '+ a + ' и '+ b + ' равна '+ result);
     }
+
+    function showAuthor() {
+        let author = 'Автор страницы: \nПетерс Анна Алексеевна';
+        alert(author);
+    }
+
+    function showHello(){
+            alert('Приветствую вас на моей странице! \nЗачем думать-надо делать!') 
+    }
     </script>
     <style>
         .message {
@@ -46,16 +55,16 @@
     </style>
 </head>
 <body>
-    <header>
+    <header onclick="showAuthor()">
         НГТУ, ФБ, Лабораторная 5
     </header>
 
     <main>
   <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-  <div class="message">Узнать, кто автор страницы</div>
+  <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
     </main>
 
-    <footer>
+    <footer ondblclick="showHello()">
         &copy; Анна Петерс, ФБИ-21, 2 курс, 2024
     </footer>
 </body>
