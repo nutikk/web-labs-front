@@ -9,7 +9,7 @@
     <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
     <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
     <script> 
-       function blurChange () {
+        function blurChange () {
             let value = document.getElementById('blurValue').value + 'px';
             document.getElementById('blurOutput').innerText = value;
             document.getElementById('blurImage').style.filter = 'blur(' + value + ')';
@@ -19,7 +19,12 @@
             document.getElementById('brightnessOutput').innerText = value;
             document.getElementById('blurImage').style.filter = 'brightness(' + value + ')';
         }
- 
+        function contrastChange () {
+            let value = document.getElementById('contrastValue').value + '%';
+            document.getElementById('contrastOutput').innerText = value;
+            document.getElementById('blurImage').style.filter = 'contrast(' + value + ')';
+        }
+
     </script> 
     <style> 
         .rr img{
@@ -27,28 +32,34 @@
             height: 50%;
             margin-top: 20px;
         }
-        
+
     </style>
 </head>
 <body>
     <header>
         НГТУ, ФБ, Лабораторная 5
     </header>
-    <main>
+<main>
+    <div>
+        Фильтр blur:
+        <input type="range" min="0" max="20" value="0" onchange="blurChange()" id="blurValue">
+        <span id="blurOutput"></span>
+    </div>
         <div>
-            Фильтр blur:
-            <input type="range" min="0" max="20" value="0" onchange="blurChange()" id="blurValue">
-            <span id="blurOutput"></span>
+            Фильтр brightness:
+            <input type="range" min="0" max="500" value="100" onchange="brightnessChange()" id="brightnessValue">
+            <span id="brightnessOutput"></span>
         </div>
-            <div>
-                Фильтр brightness:
-                <input type="range" min="0" max="500" value="100" onchange="brightnessChange()" id="brightnessValue">
-                <span id="brightnessOutput"></span>
-            </div>
-        <div class="rr">
-            <img src="https://i.pinimg.com/originals/71/7c/dd/717cddc2230555de97779bff2af7a1fd.jpg" id="blurImage">
+
+        <div>
+            Фильтр contrust:
+            <input type="range" min="0" max="500" value="100" onchange="contrastChange()" id="contrastValue">
+            <span id="contrastOutput"></span>
         </div>
-    </main>
+    <div class="rr">
+        <img src="https://i.pinimg.com/originals/71/7c/dd/717cddc2230555de97779bff2af7a1fd.jpg" id="blurImage">
+    </div>
+</main>
 
     <footer ondblclick="showHello()">
         &copy; Анна Петерс, ФБИ-21, 2 курс, 2024
