@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Петерс Анна Алексеевна. Лабораторная 4</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <script> 
+        function Remove(circle) { 
+            circle.style.opacity = '0'; 
+        } 
+ 
+        function Return() { 
+            document.querySelectorAll('.circle').forEach(function(circle) { 
+                circle.style.opacity = '1'; 
+        }); 
+        } 
+ 
+    </script> 
+    <style> 
+        .circle{ 
+            color: black;
+            border-radius: 100%; 
+            border: solid 3px; 
+            width: 80px; 
+            height: 80px; 
+            display: inline-block; 
+            text-align: center; 
+            font-size: 50pt; 
+            position: absolute; 
+            cursor: pointer; 
+            transition: 0.5s; 
+            margin: 10px;
+            left: calc(10% + 80% * var(--rand-x));
+            top: calc(10% + 80% * var(--rand-y));
+        }
+        </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная 5
+    </header>
+    <main>
+        <div class="circle 1" id="output1" style="background-color: blueviolet; --rand-x:0.1; --rand-y:0.2;" onclick="Remove(this)">1</div> 
+        <div class="circle 2" id="output2" style="background-color: white; --rand-x:0.9; --rand-y:0.5;" onclick="Remove(this)">2</div> 
+        <div class="circle 3" id="output3" style="background-color: pink; --rand-x:0.7; --rand-y:0.1;" onclick="Remove(this)">3</div> 
+        <div class="circle 4" id="output4" style="background-color: red; --rand-x:0.4; --rand-y:0.6;" onclick="Remove(this)">4</div> 
+        <div class="circle 5" id="output5" style="background-color: gray; --rand-x:0.6; --rand-y:0.6;" onclick="Remove(this)">5</div> 
+        <div class="circle 6" id="output6" style="background-color: blue; --rand-x:0.3; --rand-y:0.3;" onclick="Remove(this)">6</div> 
+        <div class="circle 7" id="output7" style="background-color: green; --rand-x:0.5; --rand-y:0.9;" onclick="Remove(this)">7</div> 
+        <div class="circle 8" id="output8" style="background-color: yellow; --rand-x:0.4; --rand-y:0.1;" onclick="Remove(this)">8</div> 
+        <div class="circle 9" id="output9" style="background-color: maroon; --rand-x:0.1; --rand-y:0.6;" onclick="Remove(this)">9</div> 
+        <div class="circle 10" id="output10" style="background-color: brown; --rand-x:0.2; --rand-y:0.3;" onclick="Remove(this)">10</div> 
+        <input type="button" value="Вернуть" onclick="Return()"> 
+    </main>
+
+    <footer ondblclick="showHello()">
+        &copy; Анна Петерс, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
