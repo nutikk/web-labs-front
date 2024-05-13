@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Петерс Анна Алексеевна. Лабораторная 4</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <style>
+        .color-block {
+            width: 200px;
+            height: 200px;
+            margin-left: 550px;
+            margin-top :200px;
+            padding: 50px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.7s, color 0.5s;
+            background-color: yellow;
+            color: black;
+            border: 5px solid;
+            border-color: salmon;
+            transition: 0.5s;
+        }
+        .color-block:hover{
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+     function changeColor(div) {
+            if (div.style.backgroundColor == 'yellow') {
+                div.style.backgroundColor = 'red';
+                document.getElementById('color-name').innerHTML = 'Красный';
+                div.style.color = 'white';
+            } 
+            else if (div.style.backgroundColor == 'red') {
+                div.style.backgroundColor ='black';
+                document.getElementById('color-name').innerHTML = 'Чёрный';
+            } 
+            else if (div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'blue';
+                document.getElementById('color-name').innerHTML = 'Синий';
+            } 
+            else if (div.style.backgroundColor == 'blue') {
+                div.style.backgroundColor = 'green';
+                document.getElementById('color-name').innerHTML = 'Зелёный';
+            } 
+            else {
+                div.style.backgroundColor = 'yellow';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'Жёлтый';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная 6
+    </header>
+
+    <main>
+        <div class="color-block" ondblclick="changeColor(this)">
+            Цвет: <span id="color-name">Жёлтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
+        </div>
+    </main>
+
+    <footer>
+        &copy; Анна Петерс, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
