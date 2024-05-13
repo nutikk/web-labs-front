@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Петерс Анна Алексеевна. Лабораторная 6</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <style>
+        img{
+            width: 30%;
+            height: 30%;
+        }
+    </style>
+    <script>
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+
+            if(color == 'Серый' && type == 'Футболка') {
+                wear.src = 'gray.jpg';
+            }
+            else if (color === 'Белый' && type === 'Футболка') {
+                wear.src = 'white.jpg';
+            } 
+            else if (color === 'Черный' && type === 'Футболка') {
+                wear.src = 'black.jpg';
+            } 
+            else if (color === 'Серый' && type === 'Поло') {
+                wear.src = 'gray_sweater.jpg';
+            } 
+            else if (color === 'Белый' && type === 'Поло') {
+                wear.src = 'white_sweater.jpg';
+            } 
+            else if (color === 'Черный' && type === 'Поло') {
+                wear.src = 'black_sweater.jpg'; 
+            } 
+            else if (color === 'Серый' && type === 'Майка') {
+                wear.src = 'gray_shirt.jpg';
+            } 
+            else if (color === 'Белый' && type === 'Майка') {
+                wear.src = 'white_shirt.jpg'; 
+            } else if (color === 'Черный' && type === 'Майка') {
+                wear.src = 'black_shirt.jpg';
+            }
+        }
+        function resetFilter() {
+            document.getElementById('wear-color').value = '';
+            document.getElementById('wear-type').value = '';
+            document.getElementById('wear').src = '';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная 6
+    </header>
+
+    <main>
+      <div class="wear">
+        Цвет одежды:
+        <select id="wear-color">
+            <option>Серый</option>
+            <option>Белый</option>
+            <option>Черный</option>
+        </select><br>
+        Тип одежды:
+        <select id="wear-type">
+            <option>Футболка</option>
+            <option>Поло</option>
+            <option>Майка</option>
+        </select><br>
+
+        <button onclick="filter()">OK</button>
+        <button onclick="resetFilter()">Вернуться</button>
+
+        <img id="wear">
+    </div>
+    </main>
+
+    <footer>
+        &copy; Анна Петерс, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
