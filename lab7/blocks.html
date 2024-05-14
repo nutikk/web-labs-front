@@ -94,6 +94,18 @@
                 return color;
             }
 
+            function createOpacityBlocks() {
+            let main = document.querySelector('main');
+            for (let i = 1; i <= 10; i++) {
+                let newBlock = document.createElement('div');
+                newBlock.className = 'block';
+                newBlock.style.backgroundColor = getRandomColor();
+                newBlock.style.opacity = i / 10;
+                newBlock.innerHTML = i;
+                main.appendChild(newBlock);
+            }
+        }
+
 
                 
         
@@ -114,6 +126,7 @@
             <button onclick="add20_50()">20 => 50</button>
             <button onclick="addCircles()">10 => -80</button>
             <button onclick="clearBlocks()">Очистить блоки</button>
+            <button onclick="createOpacityBlocks()">Создать блоки с opacity</button>
         </div>      
     </main>
     
