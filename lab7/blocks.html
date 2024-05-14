@@ -55,20 +55,20 @@
             let blocks = main.querySelectorAll('.block');
             blocks.forEach(block => block.remove());
         }
+        
+        function add20_50() {
+            let main = document.querySelector('main');
+            for(let i = 20; i<=50; i+=2.5){
+                let newBlock = document.createElement('div');
+                newBlock.className = 'block';
+                newBlock.style.backgroundColor = 'yellow';
+                newBlock.style.height = '30px';
+                newBlock.style.border = '5px solid green'; 
+                newBlock.style.margin = '10px';
+                newBlock.innerHTML = `${i}`;
 
-            function add20_50() {
-                let main = document.querySelector('main');
-                for(let i = 20; i<=50; i+=2.5){
-                    let newBlock = document.createElement('div');
-                    newBlock.className = 'block';
-                    newBlock.style.backgroundColor = 'yellow';
-                    newBlock.style.height = '30px';
-                    newBlock.style.border = '5px solid green'; 
-                    newBlock.style.margin = '10px';
-                    newBlock.innerHTML = `${i}`;
-
-                    main.appendChild(newBlock);
-                }
+                main.appendChild(newBlock);
+            }
             }
 
             function addCircles() {
@@ -106,9 +106,22 @@
             }
         }
 
+        function createColorfulCircles() {
+            let main = document.querySelector('main');
+            let circleCount = document.getElementById('circle-count').value;
 
-                
-        
+            for(let i = circleCount; i > 0; i--){
+                let newCircle = document.createElement('div');
+                newCircle.className = 'circle';
+                newCircle.style.backgroundColor = i % 2 === 0 ? 'green' : 'red';
+                newCircle.style.width = '20px';
+                newCircle.style.height = '20px';
+                newCircle.style.border = '2px solid black';
+                newCircle.innerHTML = i;
+
+                main.appendChild(newCircle);
+            }
+        }
     </script>
 </head>
 <body>
@@ -127,7 +140,13 @@
             <button onclick="addCircles()">10 => -80</button>
             <button onclick="clearBlocks()">Очистить блоки</button>
             <button onclick="createOpacityBlocks()">Создать блоки с opacity</button>
-        </div>      
+        </div>
+        
+        <div>
+            <label for="circle-count">Количество кругов:</label>
+            <input type="number" id="circle-count" value="0">
+            <button onclick="createColorfulCircles()">Цветные круги</button>
+        </div>
     </main>
     
 
