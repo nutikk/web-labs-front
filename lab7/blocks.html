@@ -8,6 +8,14 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
     <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <style>
+        .block {
+            margin: 10px;
+            border: 2px solid black;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+    </style>
     <script>
         function addNewBlock() {
             let newBlock = document.createElement('div');
@@ -18,6 +26,26 @@
 
             document.querySelector('main').appendChild(newBlock);
         }
+        function addNewBlocks() {
+            let main = document.querySelector('main');
+            let blockCount = document.getElementById('block-count').value;
+            main.innerHTML = '';
+            for(let i = 0; i < blockCount; i++) {
+                let newBlock = document.createElement('div');
+                newBlock.className = 'block';
+                newBlock.style.backgroundColor = 'pink';
+                newBlock.style.height = '50px';
+                newBlock.style.width = `${(i + 1) * 100}px`;
+                newBlock.innerHTML = `Блок № ${i+1}: 2*${i}<sup>2</sup> ${2 * i**2}`;
+
+                main.appendChild(newBlock);
+            }
+
+            function clearBlocks() {
+                let main = document.querySelector('main');
+                main.innerHTML = '';
+            }
+        }
     </script>
 </head>
 <body>
@@ -26,8 +54,16 @@
     </header>
 
     <main>
-      <button onclick="addNewBlock()">Добавить блок</button>
+        <h1>ПОПРОБУЙ ВСТАВИТЬ БЛОК</h1>
+        <div class="blocks">
+            <label for="block-count">Количество блоков:</label>
+            <input type="number" id="block-count" value="0">
+            <button onclick="addNewBlock()">Добавить блок</button>
+            <button onclick="addNewBlocks()">Добавить блоки</button>
+            <button onclick="clearBlocks()">Очистить блоки</button>
+        </div>      
     </main>
+    
 
     <footer>
         &copy; Анна Петерс, ФБИ-21, 2 курс, 2024
