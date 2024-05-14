@@ -15,6 +15,15 @@
             padding: 3px;
             box-sizing: border-box;
         }
+
+        .circle {
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            margin: 5px;
+        }
     </style>
     <script>
         function addNewBlock() {
@@ -29,7 +38,6 @@
         function addNewBlocks() {
             let main = document.querySelector('main');
             let blockCount = document.getElementById('block-count').value;
-            main.innerHTML = '';
             for(let i = 0; i < blockCount; i++) {
                 let newBlock = document.createElement('div');
                 newBlock.className = 'block';
@@ -40,12 +48,55 @@
 
                 main.appendChild(newBlock);
             }
-
-            function clearBlocks() {
-                let main = document.querySelector('main');
-                main.innerHTML = '';
-            }
         }
+
+        function clearBlocks() {
+            let main = document.querySelector('main');
+            let blocks = main.querySelectorAll('.block');
+            blocks.forEach(block => block.remove());
+        }
+
+            function add20_50() {
+                let main = document.querySelector('main');
+                for(let i = 20; i<=50; i+=2.5){
+                    let newBlock = document.createElement('div');
+                    newBlock.className = 'block';
+                    newBlock.style.backgroundColor = 'yellow';
+                    newBlock.style.height = '30px';
+                    newBlock.style.border = '5px solid green'; 
+                    newBlock.style.margin = '10px';
+                    newBlock.innerHTML = `${i}`;
+
+                    main.appendChild(newBlock);
+                }
+            }
+
+            function addCircles() {
+                let main = document.querySelector('main');
+                for(let i = 10; i >= -80; i -= 3){
+                    let newCircle = document.createElement('div');
+                    newCircle.className = 'circle';
+                    newCircle.style.backgroundColor = getRandomColor();
+                    newCircle.style.width = '20px';
+                    newCircle.style.height = '20px';
+                    newCircle.style.border = '2px solid black';
+                    newCircle.innerHTML = i;
+                    main.appendChild(newCircle);
+                }
+            }
+
+            function getRandomColor() {
+                let letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+
+                
+        
     </script>
 </head>
 <body>
@@ -60,6 +111,8 @@
             <input type="number" id="block-count" value="0">
             <button onclick="addNewBlock()">Добавить блок</button>
             <button onclick="addNewBlocks()">Добавить блоки</button>
+            <button onclick="add20_50()">20 => 50</button>
+            <button onclick="addCircles()">10 => -80</button>
             <button onclick="clearBlocks()">Очистить блоки</button>
         </div>      
     </main>
