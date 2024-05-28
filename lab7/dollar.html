@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Петерс Анна Алексеевна. Лабораторная 7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <style>
+        .container {
+            text-align: center;
+        }
+        button {
+            color: #ffffff;
+            background-color: darksalmon;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button:hover {
+            background-color: #d6b577;
+        }
+        table {
+            width: 150px;
+            margin: 0px auto ;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        #detail {
+            margin-top: 20px;
+            font-size: 18px;
+            color: darksalmon;
+        }
+    </style>
+    <script>
+        function showExchange() {
+            const exchange = [93.4419, 93.5891, 94.0742, 94.3242, 94.0922, 93.4409, 93.2519, 93.2918, 92.5058, 92.1314];
+            let table = document.getElementById('dollar-table');
+            for (let i = 0; i < exchange.length; i++) {
+                let tr = document.createElement('tr');
+                let td = document.createElement('td');
+                td.innerText = exchange[i];
+                tr.appendChild(td);
+                table.appendChild(tr);
+            }
+            let sum = 0;
+            for (let i = 0; i < exchange.length; i++) {
+                sum += exchange[i];
+            }
+            let average = sum / exchange.length;
+            average = average.toFixed(2);
+            let detail = document.getElementById('detail');
+            detail.innerText = `Среднее значение: ${average}`;
+            let button = document.querySelector('button');
+            button.style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+    <main>
+        <div class="container">
+            <button onclick="showExchange()">Курс доллара</button>
+            <table id="dollar-table">
+                <tr>
+                    <th>Курс доллара</th>
+                </tr>
+            </table>
+            <div id="detail"></div>
+        </div>
+    </main>
+    <footer>
+        &copy; Анна Петерс, ФБИ-21, 2 курс, 2024    
+    </footer>
+</body>
+</html>
