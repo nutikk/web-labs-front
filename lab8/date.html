@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Петерс Анна Алексеевна. Лабораторная 8</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <script src="date.js"></script>
+        <style>
+            button {
+                background-color: #4CAF50; 
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px; 
+                transition-duration: 0.4s; 
+                cursor: pointer; 
+                border: 2px solid #4CAF50; 
+                border-radius: 5px; 
+            }
+            button:hover {
+                background-color: white;
+                color: #4CAF50; 
+            }
+            #current-date {
+                border: 2px solid #4CAF50;
+                padding: 20px; 
+                border-radius: 10px; 
+                background-color: rgb(224, 191, 191);
+            }
+            .daysWeek {
+                border: 2px solid #4CAF50;
+                padding: 20px; 
+                border-radius: 10px; 
+                background-color: rgb(224, 191, 191);
+            }
+        </style>
+    </head>
+
+    <body onload="showDate()">
+        <header>
+            НГТУ, ФБ, Лабораторная работа 8
+        </header>
+        
+        <main>
+            <div id="current-date"></div><br>
+            <div class="daysWeek">
+                <label for="day">
+                    День: <input type="number" id="day" min="1" max="31" required>
+                </label>
+                <label for="month">
+                    Месяц: <input type="number" id="month" min="1" max="12" required>
+                </label>
+                <label for="year">
+                    Год: <input type="number" id="year" min="1900" max="2100" required>
+                </label>
+                <button onclick="getDayWeek()">Определить день недели</button>
+                <div id="day-of-week"></div>
+            </div>
+        </main>
+        
+        <footer>
+            &copy; Анна Петерс, ФБИ-21, 2 курс, 2024    
+        </footer>
+    </body>
+</html>
