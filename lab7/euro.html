@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Петерс Анна Алексеевна. Лабораторная 7</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <script>
+            function getEuroExchangeRate() {
+                const url = 'https://www.cbr-xml-daily.ru/daily_json.js';
+                fetch(url)
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(json) {
+                        const euroRate = json.Valute.EUR.Value;
+                        const previousDate = json.Timestamp;
+                        const previousRate = json.Valute.EUR.Previous;
+                        const difference = euroRate - previousRate;
+                        let trendMessage = '';
+                        if (difference > 0) {
+                            trendMessage = 'Курс евро вырос на ' + difference.toFixed(2) + ' рублей.';
+                        } else if (difference < 0) {
+                            trendMessage = 'Курс евро упал на ' + Math.abs(difference).toFixed(2) + ' рублей.';
+                        } else {
+                            trendMessage = 'Курс евро не изменился.';
+                        }
+                        const outputDiv = document.getElementById('output');
+                        outputDiv.innerHTML = `
+                            <div class="inf">
+                                <h2>Курс евро</h2>
+                                <div>Текущий курс: ${euroRate.toFixed(2)} рублей за 1 евро</div>
+                                <div>Дата запроса: ${new Date(previousDate).toLocaleDateString()}</div>
+                                <div>Курс за прошлую дату: ${previousRate.toFixed(2)}</div>
+                                <div>Разница между текущим и прошлым курсом составила: ${difference.toFixed(2)}</div>
+                                <div>${trendMessage}</div>
+                            </div>
+                        `;
+                    })
+                    .catch(function(error) {
+                    console.error('Ошибка:', error);
+                    });
+            }
+        </script>
+        
+        <style>
+            a{
+                margin-left: 130px;
+                font-size: 25px;
+            }
+            .inf {
+                color: #b93737;
+                text-align: center;
+                border: 2px solid #5c1f1f;
+                padding: 10px;
+                border-radius: 5px;
+                margin: 10px 0;
+                background-color: whitesmoke;
+                font-family: Arial, sans-serif;
+                width: fit-content;
+                height: fit-content;
+            }
+            .inf h2 {
+                font-size: 25pt;
+                margin-bottom: 10px;
+            }
+            .inf div {
+                margin: 5px 0;
+            }
+            button {
+                border-radius: 5px;
+                margin-left: 145px;
+                margin-top: 50px;
+                margin-bottom: 30px;
+                color: #ffffff;
+                background-color: darksalmon;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                margin-bottom: 20px;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа 7
+        </header>
+        
+        <main>
+            <a href="https://www.cbr-xml-daily.ru/">Курсы валют, API</a><br>
+            <button onclick="getEuroExchangeRate()">Получить курс евро</button>
+            <div id="output"></div>
+        </main>
+        <footer>
+            &copy; Анна Петерс, ФБИ-21, 2 курс, 2024    
+        </footer>
+    </body>
+</html>

@@ -61,8 +61,7 @@
 
             const label = document.createElement('label');
             const productName = document.createTextNode(`${product.name} (${product.price} руб./шт)`);//Это шаблонная строка,
-            // которая использует интерполяцию для вставки значения свойства name из объекта product.
-            // product - это элемент из массива availableProducts, который передается в функцию createProductElement.
+
             const input = document.createElement('input');
             input.type = 'number';
             input.min = 0;

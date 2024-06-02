@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании</title>
+    <style>
+        .new-paragraph {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #1b1a1a;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card-container {
+            display: flex;
+            justify-content: center; 
+            flex-wrap: wrap;
+        }
+        .card {
+            flex: 1 0 30%; 
+            margin: 10px; 
+            text-align: center; 
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .card img {
+            max-width: 100%; 
+            height: auto; 
+        }
+        .card h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #000000;
+        }
+        .news-section {
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .currency-chart {
+            margin-top: 30px;
+            width: 100%;
+            height: 300px;
+        }
+        section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        section{
+            margin-bottom: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            position: relative; 
+        }
+        li:not(:last-child) {
+            margin-right: 20px;
+        }
+        li:last-child::before {
+            display: none; 
+        }
+        .hed{
+            text-align: center;
+        }
+        .main-content {
+            padding: 20px;
+            background-color: #ffffff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .main-content h1 {
+            color: #333;
+        }
+        .main-content p {
+            color: #333;
+            line-height: 1.6em;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .grid-cont {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; 
+        }
+        .grid-image {
+            margin-right: 100px;
+            max-width: 19%;
+            height: auto; 
+            margin-left: 20px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../rgzBank/img/headerLogo.png" alt="Логотип">
+    </header>
+    <main>
+        <h1 class="hed">О компании Первоуральскийбанк АО</h1>
+        <p class="new-paragraph">
+            Первоуральский Банк АО – это региональный банк, основанный в 1992 году и зарегистрированный в городе Первоуральск Свердловской области. 
+            На протяжении более 30 лет банк успешно работает и развивается, предоставляя своим клиентам комплексное банковское обслуживание.
+        </p>
+        <p class="new-paragraph" style="font-size: 18px; line-height: 1.6; color: #1b1a1a; margin-top: 20px;">
+            Первоуральский Банк АО – это региональный банк, основанный в 1992 году и зарегистрированный в городе Первоуральск Свердловской области. 
+            На протяжении более 30 лет банк успешно работает и развивается, предоставляя своим клиентам комплексное банковское обслуживание.
+            <h2>Основные направления деятельности Первоуральского Банка:</h2>
+            <div class="grid-cont">
+                <ul>
+                    <li>Кредитование юридических и физических лиц</li>
+                    <li>Открытие и обслуживание расчетных и текущих счетов</li>
+                    <li>Прием вкладов и депозитов</li>
+                    <li>Выпуск банковских карт</li>
+                    <li>Валютные операции</li>
+                    <li>Инкассация и эквайринг</li>
+                    <li>Дистанционное банковское обслуживание</li>
+                </ul>
+                <img src="../rgzBank/img/imgimg.png" class="grid-image">
+                <img src="../rgzBank/img/imgimg2.png" class="grid-image">
+            </div>
+        </p>
+        <section class="main-content">
+            <div class="container">
+            <h1>О Первоуральском Банке</h1>
+            <p>
+                Благодаря профессиональной команде и взвешенной кредитно-финансовой политике, 
+                Первоуральский Банк на протяжении многих лет демонстрирует стабильные финансовые результаты
+                и уверенно занимает лидирующие позиции на региональном рынке банковских услуг. 
+                Одним из ключевых преимуществ банка является индивидуальный подход к каждому клиенту и 
+                нацеленность на долгосрочное сотрудничество. Квалифицированные специалисты банка тщательно анализируют 
+                потребности и финансовые возможности клиентов, предлагая оптимальные решения для эффективного управления денежными средствами. 
+                Помимо классических банковских услуг, Первоуральский Банк предоставляет своим клиентам ряд дополнительных сервисов, включая инвестиционное консультирование, управление активами, валютный контроль и сопровождение внешнеэкономической деятельности. Важным направлением работы банка является поддержка местных предпринимателей и развитие региональной экономики. Первоуральский Банк активно участвует в реализации государственных программ кредитования малого и среднего бизнеса, предлагая выгодные условия финансирования для представителей различных отраслей. Стремясь к повышению качества обслуживания, банк постоянно инвестирует в развитие информационных технологий и внедрение передовых банковских продуктов. Клиенты Первоуральского Банка могут пользоваться современными системами дистанционного банковского обслуживания, позволяющими совершать большинство операций удаленно, в любое время и из любой точки мира. Первоуральский Банк ответственно подходит к вопросам корпоративной социальной ответственности. Банк активно участвует в благотворительных и спонсорских проектах, направленных на развитие социальной инфраструктуры и повышение качества жизни в регионе присутствия. Благодаря эффективному менеджменту, взвешенной стратегии развития и высокому уровню клиентского сервиса, Первоуральский Банк заслужил доверие и признание как со стороны частных, так и корпоративных клиентов. Банк продолжает уверенно двигаться вперед, укрепляя свои позиции на рынке и расширяя спектр предоставляемых услуг.
+            </p>
+            </div>
+        </section>       
+        <div class="card-container">
+            <div class="card">
+                <h1>Депозит Классик</h1>
+                <img src="../rgzBank/img/PROC1.png">
+                <p>Вклад в Российских рублях на любую сумму от 10 дней</p>
+            </div>
+            <div class="card">
+                <h1>Депозит Эмитентам</h1>
+                <img src="../rgzBank/img/PROC2.png">
+                <p>Минус 2 % от ставки купона фиксированная ставка на весь период</p>
+            </div>
+            <div class="card">
+                <h1>Депозит Овернайт</h1>
+                <img src="../rgzBank/img/PROC3.png">
+                <p>Размещение на 1 ночь - проценты на следующий день от 1 000 000 руб.</p>
+            </div>
+        </div>
+        <section>
+            <h2>Акции и спецпредложения</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Название акции</th>
+                        <th>Описание</th>
+                        <th>Дата начала</th>
+                        <th>Дата окончания</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Акция "Начни новый год с выгодой"</td>
+                        <td>Привлекайте новых клиентов и получайте дополнительные бонусы</td>
+                        <td>31.05.2024</td>
+                        <td>05.06.2024</td>
+                    </tr>
+                    <tr>
+                        <td>Скидка на первый вклад</td>
+                        <td>Получите дополнительный процент на первый вклад</td>
+                        <td>15.04.2024</td>
+                        <td>15.06.2024</td>
+                    </tr>
+                    <tr>
+                        <td>Кредит под 0%</td>
+                        <td>Особые условия для постоянных клиентов</td>
+                        <td>01.05.2024</td>
+                        <td>28.07.2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <div class="menu-panel">
+            <a href="main.html"><img src="../rgzBank/img/company.png" alt="О компании"></a>
+            <a href="news.html"><img src="../rgzBank/img/news.png" alt="Новости"></a>
+            <a href="course.html"><img src="../rgzBank/img/course.png" alt="Курс валют"></a>
+            <a href="contacts.html"><img src="../rgzBank/img/contacts.png" alt="Контактные данные"></a>
+            <a href="video.html"><img src="../rgzBank/img/video.png" alt="Новости"></a>
+        </div>
+    </footer>
+</body>
+</html>
